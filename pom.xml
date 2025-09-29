@@ -31,13 +31,17 @@
                 <version>3.5.3</version>
                 <executions>
                     <execution>
+                        <id>run-it</id>
+                        <phase>integration-test</phase>
                         <goals>
-                            <goal>
-                                integration-test
-                            </goal>
-                            <goal>
-                                verify
-                            </goal>
+                            <goal>integration-test</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>verify-it</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>verify</goal>
                         </goals>
                     </execution>
                 </executions>
