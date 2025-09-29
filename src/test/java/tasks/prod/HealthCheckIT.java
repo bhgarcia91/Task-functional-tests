@@ -11,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class HealhCheckIT {
+public class HealthCheckIT {
 
     @Test
     public void healthCheck() throws MalformedURLException {
