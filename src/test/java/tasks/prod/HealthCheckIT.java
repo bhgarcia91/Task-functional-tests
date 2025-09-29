@@ -14,7 +14,7 @@ import java.time.Duration;
 public class HealthCheckIT {
 
     @Test
-    public void healthCheck() throws MalformedURLException {
+    public void healthCheckIT() throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
         WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.23:4444"), options);
