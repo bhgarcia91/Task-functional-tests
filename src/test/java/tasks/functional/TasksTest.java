@@ -119,5 +119,28 @@ public void naoDeveSalvarSemData() throws MalformedURLException {
         }
     }
 
+    @Test
+    public void deveRemoverTarefaComSucess() throws MalformedURLException {
+        WebDriver driver = acessarAplicacao();
+        try {
+            //inserir tarefa
+            driver.findElement(By.id("addTodo")).click();
+            driver.findElement(By.id("dueDate")).sendKeys("20/12/2026");
+            driver.findElement(By.id("Task")).sendKeys("Excluding Test");
+            driver.findElement(By.id("saveButton")).click();
+            String message = driver.findElement(By.id("message")).getText();
+            Assert.assertEquals("Success!", message);
+
+            //remover a tarefa
+            driver.findElement(By.xpath("//a[@class='btn btn-outline-danger btn-sm']")).click();
+
+           // String removemessage = driver.findElement(By.id("message")).getText();
+            Assert.assertEquals("Success!", message);
+
+        } finally {
+            driver.quit();
+        }
+    }
+
 
 }
