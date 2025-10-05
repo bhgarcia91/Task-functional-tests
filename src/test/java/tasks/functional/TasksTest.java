@@ -134,7 +134,7 @@ public void naoDeveSalvarSemData() throws MalformedURLException {
             //remover a tarefa
             driver.findElement(By.xpath("//a[@class='btn btn-outline-danger btn-sm']")).click();
 
-           // String removemessage = driver.findElement(By.id("message")).getText();
+            message = driver.findElement(By.id("message")).getText();
             Assert.assertEquals("Success!", message);
 
         } finally {
